@@ -10,10 +10,6 @@ app.get('/', (req, res) => {
   return res.send('Home!!');
 });
 
-app.get('/users', (req, res) => {
-  return res.send('Hello, World!!');
-});
-
 const apiRouter = Router();
 app.use('/api', apiRouter);
 
