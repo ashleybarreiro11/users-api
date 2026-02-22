@@ -1,10 +1,13 @@
 //Las clases inician con mayúscula
 import { Router } from 'express';
+import { UserController } from './user.controller';
 
 export class UserRouter {
   public router: Router;
+  private userController: UserController;
 
-  constructor() {
+  constructor(userController: UserController) {
+    this.userController = userController;
     this.router = Router();
     this.router.get('/users', (req, res) => {
       return res.send('Get users');
